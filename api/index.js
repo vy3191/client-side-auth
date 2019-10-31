@@ -46,7 +46,7 @@ app.post("/signup", (req, res, next) => {
 	})
 })
 
-app.post("/login", (req, res, next) => {
+app.post("/signin", (req, res, next) => {
 	const authErr = httpError(401, "Invalid email or password!")
 
 	if (!req.body.email || !req.body.password) {

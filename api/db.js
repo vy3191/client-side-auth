@@ -6,7 +6,7 @@ const DB_PATH = syspath.resolve(__dirname, "../database.json")
 
 try {
 	read()
-} catch(err) {
+} catch (err) {
 	const defaultValues = {
 		users: [
 			{
