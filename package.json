@@ -1,0 +1,44 @@
+{
+	"private": true,
+	"scripts": {
+		"start-api": "node api/index.js",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"format": "prettier --write '**/*.{js,json,md}'"
+	},
+	"dependencies": {
+		"body-parser": "1.19.0",
+		"cors": "2.8.5",
+		"express": "4.17.1",
+		"fs-extra": "8.1.0",
+		"http-errors": "1.7.3",
+		"jsonwebtoken": "8.5.1",
+		"react": "^16.11.0",
+		"react-dom": "^16.11.0",
+		"uuid": "3.3.3"
+	},
+	"devDependencies": {
+		"prettier": "1.18.2",
+		"react-scripts": "3.2.0"
+	},
+	"prettier": {
+		"semi": false,
+		"useTabs": true,
+		"trailingComma": "all",
+		"arrowParens": "always"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
