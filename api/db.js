@@ -1,16 +1,28 @@
 const fs = require("fs-extra")
 const syspath = require("path")
+const uuid = require("uuid")
 
 const DB_PATH = syspath.resolve(__dirname, "../database.json")
 
-fs.ensureFileSync(DB_PATH)
-
-function read() {
+try {
+	read()
+} catch(err) {
 	const defaultValues = {
-		users: [],
+		users: [
+			{
+				id: uuid.v4(),
+				name: "Jane Doe",
+				email: "jane@doe.com",
+				password: "abc123",
+			},
+		],
 	}
 
-	return fs.readJsonSync(DB_PATH, { throws: false }) || defaultValues
+	write(defaultValues)
+}
+
+function read() {
+	return fs.readJsonSync(DB_PATH)
 }
 
 function write(data) {
