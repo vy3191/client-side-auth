@@ -1,10 +1,15 @@
 import "./App.css"
 import React from "react"
+import { Link, Route} from 'react-router-dom';
 
 function App() {
 	return (
 		<div className="wrapper">
-			<h1>Welcome</h1>
+			<nav>
+				<Link to="/">Home</Link>
+			</nav>
+			<Route exact path="/signin">Home</Route>
+			
 		</div>
 	)
 }
